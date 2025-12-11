@@ -7,13 +7,17 @@
     <meta name="description"
         content="ACM Student Chapter at VIT Chennai - Advancing Computing as a Science and Profession">
     <title>ACM Student Chapter - VIT Chennai</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 
 <body>
     <!-- NAVIGATION (Floating Luxury Pill) -->
     <nav class="navbar animate-fade-up">
-        <a href="index.html" class="navbar-logo">ACM <span>VIT Chennai</span></a>
+        <a href="index.html" class="navbar-logo">
+            <img src="assets/logo.png" alt="ACM Logo">
+            ACM <span>VIT Chennai</span>
+        </a>
         <ul class="navbar-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -160,20 +164,49 @@
     </section>
 
     <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container"
-            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <div>
-                <h3>ACM VIT Chennai</h3>
-                <p style="opacity: 0.7;">Advancing Computing as a Science & Profession</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3><img src="assets/logo.png" alt="ACM Logo" class="footer-logo"> ACM Student Chapter</h3>
+                <p style="color: var(--gold-primary); font-weight: 600;">VIT Chennai</p>
+                <p style="opacity: 0.7; margin-top: 1rem;">Advancing Computing as a Science & Profession.</p>
             </div>
-            <div style="text-align: right;">
-                <p class="text-gold">acm@vitchennai.edu.in</p>
-                <p style="opacity: 0.5; font-size: 0.9rem;">&copy; 2024 All Rights Reserved.</p>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p class="footer-email" style="margin-bottom: 1rem;">
+                    <span style="margin-right: 8px;">📧</span>
+                    <a href="mailto:acm@vitchennai.edu.in">acm@vitchennai.edu.in</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/acm-vit-chennai" target="_blank" class="social-link"
+                        title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/acmvitchennai" target="_blank" class="social-link"
+                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ACM Student Chapter - VIT Chennai. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; opacity: 0.5;">Designed for ACM SC VIT Chennai</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
