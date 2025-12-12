@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACM VIT Chennai — Book Review Submission</title>
+  <meta name="description" content="Submit your book review to ACM Student Chapter, VIT Chennai." />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --line: #1f2a44;
+      --brand: #3b82f6;
+      --brand-2: #22d3ee;
+      --link: #7dd3fc;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius-xl: 18px;
+      --radius-2xl: 22px;
+      --maxw: 880px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1100px 600px at 50% -150px, rgba(34,211,238,.08), transparent 60%),
+                  radial-gradient(800px 500px at 100% 0, rgba(59,130,246,.08), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px clamp(16px, 4vw, 28px);
+    }
+
+    header {
+      display: flex; align-items: center; justify-content: center;
+      padding: 18px 0 8px; text-align: center;
+    }
+
+    header img {
+      max-height: 80px;
+    }
+
+    main { margin-top: 28px; }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+      line-height: 1.15; margin: 0 0 10px;
+      letter-spacing: -.02em;
+      background: linear-gradient(135deg, #fff, #d1e9ff 40%, #a5f3fc 70%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p { color: var(--muted); margin: 0 auto; max-width: 60ch; }
+
+    .card {
+      margin: 24px auto 10px;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow);
+      padding: clamp(16px, 3.5vw, 28px);
+    }
+
+    .card h2 {
+      margin: 0 0 12px; font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    }
+
+    .iframe-wrap {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #0b1324;
+    }
+
+    .iframe-note {
+      margin-top: 12px; font-size: .95rem; color: var(--muted);
+    }
+
+    iframe.form {
+      width: 100%;
+      height: 75vh;
+      min-height: 780px;
+      border: 0;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      iframe.form { min-height: 900px; height: 85vh; }
+    }
+    @media (max-width: 560px) {
+      .card { padding: 16px; }
+      iframe.form { min-height: 1000px; height: 90vh; }
+    }
+
+    .meet-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #0f9d58, #34a853);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(15, 157, 88, 0.3);
+    }
+
+    .meet-button:hover {
+      background: linear-gradient(135deg, #0e8b4f, #2e9349);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15, 157, 88, 0.4);
+      text-decoration: none;
+      color: white;
+    }
+
+    .meet-button:active {
+      transform: translateY(0);
+    }
+
+    .meet-logo {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .meet-section {
+      text-align: center;
+      margin: 24px 0;
+      padding: 20px;
+      background: linear-gradient(180deg, rgba(15, 157, 88, 0.05), rgba(15, 157, 88, 0.02));
+      border: 1px solid rgba(15, 157, 88, 0.2);
+      border-radius: var(--radius-xl);
+    }
+
+    footer {
+      margin: 30px 0 10px; text-align: center; color: var(--muted);
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="https://vitchennai.acm.org" target="_blank" rel="noopener">
+        <img src="https://vitchennai.acm.org/images/logo.jpg" alt="ACM VIT Chennai Logo">
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Pages to Progress Book Review Submission</h1>
+        <p>
+          Share your perspectives on books that inspire computing, creativity, and community.
+          Thoughtful reviews help peers discover great reads—and your submission could be featured on
+          our chapter platforms.
+        </p>
+      </section>
+
+      <section class="meet-section">
+        <p style="margin: 0 0 12px; color: var(--muted); font-size: 0.95rem;">Join our discussion session</p>
+        <a href="https://meet.google.com/rue-ihhz-hof/" target="_blank" rel="noopener" class="meet-button">
+          <svg class="meet-logo" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+          Join Google Meet
+        </a>
+      </section>
+
+      <section id="form" class="card" aria-labelledby="form-h">
+        <h2 id="form-h">Submit via Google Form</h2>
+        <div class="iframe-wrap">
+          <iframe
+            class="form"
+            title="Book Review Submission Form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSepSavB9LdFz6WAyhJCfluyTy9jfghd6hb9xRjbN71e4Dki6g/viewform?embedded=true"
+            allow="clipboard-write;" loading="lazy">
+          </iframe>
+        </div>
+        <p class="iframe-note">
+          If the form does not display correctly, <a target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSepSavB9LdFz6WAyhJCfluyTy9jfghd6hb9xRjbN71e4Dki6g/viewform">open it directly in Google Forms</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div>Built for the ACM Student Chapter, VIT Chennai — Book Review Initiative.</div>
+      <div class="footer-links">
+        <a href="https://vitchennai.acm.org" target="_blank" rel="noopener">ACM VIT Chennai</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
