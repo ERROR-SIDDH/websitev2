@@ -201,6 +201,78 @@
   });
 })();
 
+// LinkedIn Embed Fallback Handler
+(function () {
+  const embedFrames = document.querySelectorAll(".linkedin-embed-frame");
+  if (!embedFrames.length) return;
+
+  const isWebProtocol =
+    window.location.protocol === "http:" ||
+    window.location.protocol === "https:";
+
+  const showFallback = (frame) => {
+    const fallback = frame.querySelector(".linkedin-embed-fallback");
+    if (!fallback) return;
+    fallback.hidden = false;
+    frame.classList.add("embed-fallback-visible");
+  };
+
+  embedFrames.forEach((frame) => {
+    const iframe = frame.querySelector("iframe");
+    if (!iframe) return;
+
+    if (!isWebProtocol) {
+      iframe.removeAttribute("src");
+      showFallback(frame);
+      return;
+    }
+
+    let resolved = false;
+
+    iframe.addEventListener("load", () => {
+      if (resolved) return;
+
+      try {
+        const href = iframe.contentWindow?.location?.href || "";
+        if (href.startsWith("chrome-error://")) {
+          iframe.removeAttribute("src");
+          showFallback(frame);
+          resolved = true;
+          return;
+        }
+
+        // If href is readable and not a LinkedIn page, treat as a failed embed.
+        if (href && !href.includes("linkedin.com")) {
+          iframe.removeAttribute("src");
+          showFallback(frame);
+          resolved = true;
+          return;
+        }
+
+        // If readable and still LinkedIn, keep frame as-is.
+        resolved = true;
+      } catch (error) {
+        // Cross-origin access throws on successful external embeds.
+        resolved = true;
+      }
+    });
+
+    iframe.addEventListener("error", () => {
+      if (resolved) return;
+      iframe.removeAttribute("src");
+      showFallback(frame);
+      resolved = true;
+    });
+
+    window.setTimeout(() => {
+      if (resolved) return;
+      iframe.removeAttribute("src");
+      showFallback(frame);
+      resolved = true;
+    }, 7000);
+  });
+})();
+
 // Modal Logic for Registration
 (function () {
   const openModalBtn = document.getElementById("openRegistrationModal");
