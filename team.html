@@ -416,6 +416,37 @@
                     </div>
                 </div>
             </section>
+            <section class="section-padding">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Our Community</h2>
+                        <span class="subtitle">Active Members</span>
+                    </div>
+
+                    <div class="team-carousel-wrapper">
+                        <div class="team-carousel-track">
+                            <!-- First set of cards -->
+                            <div class="team-card">
+                                <img
+                                    src="images/team/Jaaiwanth.png"
+                                    alt="Subbulakshmi"
+                                    class="team-card-image"
+                                />
+                                <div class="team-card-content">
+                                    <h3>Jaaiwanth K</h3>
+                                    <span class="role"
+                                        >Technical Member</span
+                                    >
+                                    <p class="description">
+                                        Building. Learning. Contributing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <!-- FOOTER -->
@@ -499,5 +530,18 @@
             </div>
         </footer>
         <script src="assets/js/script.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const tracks = document.querySelectorAll('.team-carousel-track');
+
+                    tracks.forEach(track => {
+                        const cards = track.children;
+
+                        if (cards.length <= 1) {
+                            track.classList.add("single-card");
+                        }
+                    });
+                });
+            </script>
     </body>
 </html>

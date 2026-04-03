@@ -3091,6 +3091,9 @@ html {
         width: 40px;
     }
 }
+.single-card {
+    animation: none !important;
+    padding-left: 2rem;
 
 /* ============================================
    BLOGS & NEWSLETTERS HUB PAGE
