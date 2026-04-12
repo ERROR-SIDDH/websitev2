@@ -163,10 +163,15 @@
 (function () {
   const openModalBtn = document.getElementById("openRegistrationModal");
   const modal = document.getElementById("registrationModal");
-  const closeButton = modal.querySelector(".close-button");
 
-  if (!openModalBtn || !modal || !closeButton) {
+  if (!openModalBtn || !modal) {
     console.warn("Modal elements not found. Skipping modal functionality.");
+    return;
+  }
+
+  const closeButton = modal.querySelector(".close-button");
+  if (!closeButton) {
+    console.warn("Modal close button not found. Skipping modal functionality.");
     return;
   }
 
@@ -273,44 +278,67 @@
   });
 })();
 
-// Modal Logic for Registration
+// (Duplicate modal block removed — handled above)
+
+// Best Chapter Stats Counter Animation
 (function () {
-  const openModalBtn = document.getElementById("openRegistrationModal");
-  const modal = document.getElementById("registrationModal");
-  const closeButton = modal.querySelector(".close-button");
+  const statNums = document.querySelectorAll(".bc-stat-num[data-target], .bc-chip-num[data-target]");
+  if (!statNums.length) return;
 
-  if (!openModalBtn || !modal || !closeButton) {
-    console.warn("Modal elements not found. Skipping modal functionality.");
-    return;
-  }
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
 
-  // Function to open the modal
-  const openModal = () => {
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // Disable body scroll
+  const animateCount = (el, target, suffix) => {
+    const duration = 1800;
+    const start = performance.now();
+
+    const update = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOut(progress);
+      const current = Math.round(eased * target);
+      el.textContent = current.toLocaleString() + (progress >= 1 && suffix ? suffix : "");
+      if (progress < 1) requestAnimationFrame(update);
+    };
+
+    requestAnimationFrame(update);
   };
 
-  // Function to close the modal
-  const closeModal = () => {
-    modal.style.display = "none";
-    document.body.style.overflow = ""; // Re-enable body scroll
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          const suffix = el.dataset.suffix || "";
+          animateCount(el, target, suffix);
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  statNums.forEach((el) => observer.observe(el));
+})();
+
+// Best Chapter Gallery Lightbox
+(function () {
+  // Reuse existing lightbox if available
+  const lightbox = document.querySelector(".lightbox-modal");
+  if (!lightbox) return;
+
+  const lightboxImg = lightbox.querySelector(".lightbox-content");
+  if (!lightboxImg) return;
+
+  const openLightbox = (src) => {
+    lightboxImg.src = src;
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
   };
 
-  // Event listeners
-  openModalBtn.addEventListener("click", openModal);
-  closeButton.addEventListener("click", closeModal);
-
-  // Close when clicking outside the modal content
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Close when pressing the Escape key
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && modal.style.display === "block") {
-      closeModal();
-    }
+  document.querySelectorAll(".bc-gallery-item img").forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => openLightbox(img.src));
   });
 })();
+
