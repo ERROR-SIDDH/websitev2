@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQJG4HGBW0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KQJG4HGBW0');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQJG4HGBW0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KQJG4HGBW0');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,104 @@
     <title>Gen AI Workshop - ACM VIT Chennai</title>
     <link rel="stylesheet" href="../assets/css/style.css?v=20260412">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .reviews-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .review-card {
+            background: var(--deep-slate);
+            border: 1px solid var(--light-slate);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            transition: all 0.4s var(--ease-luxury);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+        }
+
+        .review-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            color: rgba(212, 175, 55, 0.15);
+            font-size: 1.5rem;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            display: grid;
+            place-items: center;
+            color: var(--gold-primary);
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .review-meta h5 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            color: var(--text-bright);
+            margin: 0 0 0.2rem 0;
+        }
+
+        .review-meta span {
+            font-size: 0.75rem;
+            color: var(--gold-primary);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .review-body {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .review-keywords {
+            margin-top: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--light-slate);
+        }
+
+        .keyword-badge {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--gold-primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,7 +152,8 @@
             <p>Step into the next era of intelligent application design.</p>
         </div>
         <div class="hero-split-image">
-            <img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/poster.webp" alt="Gen AI Workshop Poster">
+            <img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/poster.webp"
+                alt="Gen AI Workshop Poster">
         </div>
     </section>
 
@@ -156,23 +255,31 @@
                 <div class="scrolling-gallery-container">
                     <div class="scrolling-gallery-track">
                         <!-- Original Set -->
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/poster.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/poster.webp"
                                 alt="Poster"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image4.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image4.webp"
                                 alt="Gallery Image 1"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image5.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image5.webp"
                                 alt="Gallery Image 2"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/IMG_9504.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/IMG_9504.webp"
                                 alt="Gallery Image 3"></div>
 
                         <!-- Duplicate Set -->
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/poster.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/poster.webp"
                                 alt="Poster"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image4.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image4.webp"
                                 alt="Gallery Image 1"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image5.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/image5.webp"
                                 alt="Gallery Image 2"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/IMG_9504.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/gen_ai_workshop/IMG_9504.webp"
                                 alt="Gallery Image 3"></div>
                     </div>
                 </div>
@@ -213,6 +320,68 @@
                         <span class="command-line helper-cursor">_</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEEDBACK REVIEWS -->
+    <section>
+        <div class="section-container">
+            <h2 class="section-title text-center">Participant Feedback</h2>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">RM</div>
+                        <div class="review-meta">
+                            <h5>Rishith Mada</h5>
+                            <span>VIT Chennai &bull; Gen AI Workshop</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        Please organize more events with such amazing speakers.
+                    </div>
+                    <div class="review-keywords">
+                        <span class="keyword-badge">Well-Organised</span>
+                        <span class="keyword-badge">Amazing Speakers</span>
+                        <span class="keyword-badge">Informative</span>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">H</div>
+                        <div class="review-meta">
+                            <h5>V Harini</h5>
+                            <span>Saveetha Engineering College &bull; Gen AI Workshop</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        The session was really interesting and interactive. I really enjoyed my time here. Thank you so
+                        much.
+                    </div>
+                    <div class="review-keywords">
+                        <span class="keyword-badge">Interesting</span>
+                        <span class="keyword-badge">Interactive</span>
+                        <span class="keyword-badge">Enjoyable</span>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">R</div>
+                        <div class="review-meta">
+                            <h5>Rashmy A M</h5>
+                            <span>Sathyabama University &bull; Gen AI Workshop</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        The session was great and knowledgeable. It was really helpful how they helped us with complex
+                        parts.
+                    </div>
+                    <div class="review-keywords">
+                        <span class="keyword-badge">Great Session</span>
+                        <span class="keyword-badge">Knowledgeable</span>
+                        <span class="keyword-badge">Helpful</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

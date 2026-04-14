@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQJG4HGBW0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KQJG4HGBW0');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQJG4HGBW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-KQJG4HGBW0');
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,8 +18,11 @@
   <!-- SEO Meta Tags -->
   <meta name="robots" content="index, follow">
   <meta name="author" content="ACM Student Chapter VIT Chennai">
-  <meta name="description" content="Server Surfers 2026 was a one-day cybersecurity event by ACM Student Chapter, VIT Chennai. It featured keynote insights, KIPS simulation, and an intense CTF challenge, engaging participants in practical cyber defense scenarios.">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <meta name="description"
+    content="Server Surfers 2026 was a one-day cybersecurity event by ACM Student Chapter, VIT Chennai. It featured keynote insights, KIPS simulation, and an intense CTF challenge, engaging participants in practical cyber defense scenarios.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <style>
     :root {
@@ -256,9 +259,15 @@
     }
 
     @keyframes drift {
+
       0%,
-      100% { transform: translate(0, 0); }
-      50% { transform: translate(480px, 170px); }
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(480px, 170px);
+      }
     }
 
     .hero-grid {
@@ -836,6 +845,7 @@
     }
 
     @media (max-width: 980px) {
+
       .hero-grid,
       .feedback-layout,
       .speaker-layout {
@@ -934,6 +944,97 @@
         transform: none;
       }
     }
+
+    .reviews-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .review-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(12, 18, 36, 0.9);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+    }
+
+    .review-card::before {
+      content: '\f10d';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      color: rgba(90, 155, 245, 0.15);
+      font-size: 1.8rem;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(58, 123, 213, 0.14);
+      border: 1px solid rgba(90, 155, 245, 0.42);
+      display: grid;
+      place-items: center;
+      color: var(--blue-bright);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .review-meta h5 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.95rem;
+      color: #e8f1ff;
+      margin-bottom: 2px;
+    }
+
+    .review-meta span {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .review-body {
+      color: #bfd2ee;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .review-keywords {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border2);
+    }
+
+    .keyword-badge {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.7rem;
+      background: rgba(58, 123, 213, 0.1);
+      border: 1px solid rgba(90, 155, 245, 0.3);
+      color: #9cb5da;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 
@@ -943,7 +1044,8 @@
       <img src="https://raw.githubusercontent.com/vitccacm/websitev2/main/assets/logo.webp" alt="ACM Logo" />
       ACM <span>VIT Chennai</span>
     </a>
-    <button class="navbar-toggle" id="navbarToggle" aria-label="Open navigation menu"><i class="fas fa-bars"></i></button>
+    <button class="navbar-toggle" id="navbarToggle" aria-label="Open navigation menu"><i
+        class="fas fa-bars"></i></button>
     <ul class="navbar-menu" id="navbarMenu">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about.html">About</a></li>
@@ -959,7 +1061,8 @@
       <div class="reveal">
         <div class="hero-badge mono"><i class="fa-solid fa-shield-halved"></i> Event Completed</div>
         <h1 class="hero-title">Server Surfers<br />2026</h1>
-        <p class="hero-copy">A one-day cybersecurity event by ACM Student Chapter, VIT Chennai with keynote insights, KIPS simulation, and an intense CTF challenge.</p>
+        <p class="hero-copy">A one-day cybersecurity event by ACM Student Chapter, VIT Chennai with keynote insights,
+          KIPS simulation, and an intense CTF challenge.</p>
 
         <div class="hero-meta">
           <div class="meta-card">
@@ -984,7 +1087,9 @@
 
       <article class="hero-poster reveal" style="transition-delay:0.1s;">
         <div class="poster-3d">
-          <img src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/server_surfer_poster.jpeg" alt="Server Surfers poster" />
+          <img
+            src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/server_surfer_poster.jpeg"
+            alt="Server Surfers poster" />
         </div>
       </article>
     </div>
@@ -999,16 +1104,24 @@
 
       <div class="media-grid">
         <article class="media-card reveal">
-          <img src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-1.jpeg" alt="Opening atmosphere" />
+          <img
+            src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-1.jpeg"
+            alt="Opening atmosphere" />
         </article>
         <article class="media-card reveal" style="transition-delay:0.06s;">
-          <img src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-2.jpeg" alt="KIPS rounds" />
+          <img
+            src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-2.jpeg"
+            alt="KIPS rounds" />
         </article>
         <article class="media-card reveal" style="transition-delay:0.1s;">
-          <img src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-3.jpeg" alt="CTF floor" />
+          <img
+            src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-3.jpeg"
+            alt="CTF floor" />
         </article>
         <article class="media-card reveal" style="transition-delay:0.14s;">
-          <video src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-4.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Session reel"></video>
+          <video
+            src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/gallery-4.mp4"
+            autoplay muted loop playsinline preload="metadata" aria-label="Session reel"></video>
         </article>
       </div>
     </div>
@@ -1018,17 +1131,24 @@
     <div class="container">
       <span class="section-tag">Speaker Details</span>
       <h2 class="section-title">Featured Speaker</h2>
-      <p class="section-lead">Industry-focused session on how modern cybersecurity defense is applied in real organizations.</p>
+      <p class="section-lead">Industry-focused session on how modern cybersecurity defense is applied in real
+        organizations.</p>
       <div class="divider"></div>
 
       <div class="speaker-layout">
         <article class="speaker-media reveal">
-          <img src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/speaker.png" alt="Arun Gantayat, Head of Presales at Kaspersky India" />
+          <img
+            src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/speaker.png"
+            alt="Arun Gantayat, Head of Presales at Kaspersky India" />
         </article>
 
         <article class="speaker-content reveal" style="transition-delay:0.06s;">
           <h3>Arun Gantayat - Head of Presales, Kaspersky India</h3>
-          <p>Arun Gantayat, Head of Presales at Kaspersky India, who offered participants an engaging walkthrough of Kaspersky's global cybersecurity ecosystem &mdash; covering the full spectrum of solutions built to combat modern cyber threats. Rather than dwelling on textbook concepts, Gantayat's session spotlighted how organizations actively analyze and respond to evolving cyber risks, giving students a grounded, practical perspective on how cybersecurity strategy operates in the field.</p>
+          <p>Arun Gantayat, Head of Presales at Kaspersky India, who offered participants an engaging walkthrough of
+            Kaspersky's global cybersecurity ecosystem &mdash; covering the full spectrum of solutions built to combat
+            modern cyber threats. Rather than dwelling on textbook concepts, Gantayat's session spotlighted how
+            organizations actively analyze and respond to evolving cyber risks, giving students a grounded, practical
+            perspective on how cybersecurity strategy operates in the field.</p>
         </article>
       </div>
     </div>
@@ -1042,12 +1162,31 @@
       <div class="divider"></div>
 
       <article class="report-box reveal">
-        <p>The Server Surfers &ndash; Capture The Flag (CTF) Event was conducted with the objective of introducing students to practical cybersecurity concepts through an engaging and competitive environment. The event aimed to enhance participants&rsquo; problem-solving abilities, technical skills, and understanding of real-world security challenges across domains such as web exploitation, cryptography, reverse engineering, and forensics.</p>
-        <p>The session commenced with an insightful keynote lecture delivered by Arun Gantayat from Kaspersky, who shared his expertise on contemporary cybersecurity trends, threat landscapes, and the importance of proactive defense mechanisms in today&rsquo;s digital world. His talk provided participants with valuable industry perspectives and set a strong foundation for the hands-on activities that followed.</p>
-        <p>Following the keynote, participants engaged in an interactive session featuring Kaspersky Interactive Protection Simulation (KIPS), a gamified cybersecurity experience designed to simulate real-world cyberattack scenarios. This activity encouraged teamwork, strategic thinking, and decision-making under pressure, allowing students to experience the dynamics of cybersecurity defense in an immersive format.</p>
-        <p>Subsequently, the Server Surfers CTF competition was conducted from 2:30 P.M. to 4:30 P.M., where participants tackled a series of challenging problems across multiple categories. The competition fostered a spirit of collaboration and innovation, as teams worked together to decode clues, analyze vulnerabilities, and capture flags within the stipulated time.</p>
-        <p>At the conclusion of the competition, winners were announced based on their performance and problem-solving efficiency. The top-performing teams were recognized and awarded, and ACM goodies were distributed to participants as tokens of appreciation and encouragement.</p>
-        <p>Overall, the event successfully achieved its objectives by combining theoretical insights with practical exposure. It provided participants with a comprehensive introduction to cybersecurity, strengthened their analytical thinking, and inspired them to explore further opportunities in the field of information security. Additionally, the event served as a valuable platform for fostering technical curiosity, teamwork, and competitive spirit among students.</p>
+        <p>The Server Surfers &ndash; Capture The Flag (CTF) Event was conducted with the objective of introducing
+          students to practical cybersecurity concepts through an engaging and competitive environment. The event aimed
+          to enhance participants&rsquo; problem-solving abilities, technical skills, and understanding of real-world
+          security challenges across domains such as web exploitation, cryptography, reverse engineering, and forensics.
+        </p>
+        <p>The session commenced with an insightful keynote lecture delivered by Arun Gantayat from Kaspersky, who
+          shared his expertise on contemporary cybersecurity trends, threat landscapes, and the importance of proactive
+          defense mechanisms in today&rsquo;s digital world. His talk provided participants with valuable industry
+          perspectives and set a strong foundation for the hands-on activities that followed.</p>
+        <p>Following the keynote, participants engaged in an interactive session featuring Kaspersky Interactive
+          Protection Simulation (KIPS), a gamified cybersecurity experience designed to simulate real-world cyberattack
+          scenarios. This activity encouraged teamwork, strategic thinking, and decision-making under pressure, allowing
+          students to experience the dynamics of cybersecurity defense in an immersive format.</p>
+        <p>Subsequently, the Server Surfers CTF competition was conducted from 2:30 P.M. to 4:30 P.M., where
+          participants tackled a series of challenging problems across multiple categories. The competition fostered a
+          spirit of collaboration and innovation, as teams worked together to decode clues, analyze vulnerabilities, and
+          capture flags within the stipulated time.</p>
+        <p>At the conclusion of the competition, winners were announced based on their performance and problem-solving
+          efficiency. The top-performing teams were recognized and awarded, and ACM goodies were distributed to
+          participants as tokens of appreciation and encouragement.</p>
+        <p>Overall, the event successfully achieved its objectives by combining theoretical insights with practical
+          exposure. It provided participants with a comprehensive introduction to cybersecurity, strengthened their
+          analytical thinking, and inspired them to explore further opportunities in the field of information security.
+          Additionally, the event served as a valuable platform for fostering technical curiosity, teamwork, and
+          competitive spirit among students.</p>
         <div class="coordinator-strip mono">
           <div>
             <h4>Faculty Coordinators:</h4>
@@ -1058,7 +1197,8 @@
             <p>HAREEKSHITH A S<br />AKSHITH M K</p>
           </div>
         </div>
-        <div class="report-note mono">Total runtime: 9:30 AM - 5:30 PM | High engagement across keynote, KIPS, and CTF.</div>
+        <div class="report-note mono">Total runtime: 9:30 AM - 5:30 PM | High engagement across keynote, KIPS, and CTF.
+        </div>
       </article>
     </div>
   </section>
@@ -1090,19 +1230,27 @@
           <div class="bars">
             <div class="bar-row">
               <span><b>KIPS Organization</b><b>86%</b></span>
-              <div class="track"><div class="fill" data-w="86"></div></div>
+              <div class="track">
+                <div class="fill" data-w="86"></div>
+              </div>
             </div>
             <div class="bar-row">
               <span><b>KIPS Challenge Design</b><b>86%</b></span>
-              <div class="track"><div class="fill" data-w="86"></div></div>
+              <div class="track">
+                <div class="fill" data-w="86"></div>
+              </div>
             </div>
             <div class="bar-row">
               <span><b>CTF Organization</b><b>92%</b></span>
-              <div class="track"><div class="fill" data-w="92"></div></div>
+              <div class="track">
+                <div class="fill" data-w="92"></div>
+              </div>
             </div>
             <div class="bar-row">
               <span><b>CTF Challenge Design</b><b>96%</b></span>
-              <div class="track"><div class="fill" data-w="96"></div></div>
+              <div class="track">
+                <div class="fill" data-w="96"></div>
+              </div>
             </div>
           </div>
         </article>
@@ -1114,6 +1262,61 @@
         <div class="note">Students highlighted exposure to real-world scenarios and networking.</div>
         <div class="note">Most loved domains: Cryptography, Reverse Engineering, Forensics, and OSINT.</div>
       </article>
+
+      <div class="reviews-grid">
+        <article class="review-card reveal" style="transition-delay: 0.16s;">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div class="review-meta">
+              <h5>G Mithilesh</h5>
+              <span>VIT Chennai &bull; CTF & KIPS Event</span>
+            </div>
+          </div>
+          <div class="review-body">
+            Well organized event. I gained practical cybersecurity skills and enjoyed the Cryptography and Reverse
+            Engineering domains.
+          </div>
+          <div class="review-keywords">
+            <span class="keyword-badge">Well Organized</span>
+            <span class="keyword-badge">Practical Skills</span>
+            <span class="keyword-badge">Cryptography</span>
+          </div>
+        </article>
+        <article class="review-card reveal" style="transition-delay: 0.20s;">
+          <div class="review-header">
+            <div class="review-avatar">G</div>
+            <div class="review-meta">
+              <h5>Gloria Dolores Rodrigues</h5>
+              <span>VIT Chennai &bull; CTF Event</span>
+            </div>
+          </div>
+          <div class="review-body">
+            The event was very well organized. It provided excellent exposure to real-world scenarios.
+          </div>
+          <div class="review-keywords">
+            <span class="keyword-badge">Well Organized</span>
+            <span class="keyword-badge">Real-world scenarios</span>
+            <span class="keyword-badge">Exposure</span>
+          </div>
+        </article>
+        <article class="review-card reveal" style="transition-delay: 0.24s;">
+          <div class="review-header">
+            <div class="review-avatar">D</div>
+            <div class="review-meta">
+              <h5>RK Darshak</h5>
+              <span>VIT Chennai &bull; KIPS Simulation</span>
+            </div>
+          </div>
+          <div class="review-body">
+            Very well organized. Gained practical skills, team collaboration, and exposure to real-world scenarios.
+          </div>
+          <div class="review-keywords">
+            <span class="keyword-badge">Well Organised</span>
+            <span class="keyword-badge">Practical Skills</span>
+            <span class="keyword-badge">Real-World Scenarios</span>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -1126,11 +1329,14 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand-head">
-            <img src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/server-surfer_logo.png" alt="Server Surfers logo" />
+            <img
+              src="https://raw.githubusercontent.com/vitccacm/websitev2/main/events/event-img/server_surfers/server-surfer_logo.png"
+              alt="Server Surfers logo" />
             <div class="footer-brand-name">SERVER SURFERS</div>
           </div>
           <div class="footer-brand-sub">ACM STUDENT CHAPTER - VIT CHENNAI</div>
-          <p class="footer-brand-desc">A capture the flag cybersecurity challenge organized by the ACM Student Chapter at VIT Chennai, presented in association with the Innovation Council and student welfare initiatives.</p>
+          <p class="footer-brand-desc">A capture the flag cybersecurity challenge organized by the ACM Student Chapter
+            at VIT Chennai, presented in association with the Innovation Council and student welfare initiatives.</p>
         </div>
 
         <div class="footer-col">
