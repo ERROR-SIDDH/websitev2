@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://vitchennai.acm.org/team.html</loc>
-    <lastmod>2025-12-13</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -32,19 +32,49 @@
   </url>
   <url>
     <loc>https://vitchennai.acm.org/blogs-newsletters.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vitchennai.acm.org/events/HackVIT_2024.html</loc>
+    <loc>https://vitchennai.acm.org/events/club_expo_oct_2025.html</loc>
     <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vitchennai.acm.org/events/gen_ai_workshop.html</loc>
+    <loc>https://vitchennai.acm.org/events/code_pulse.html</loc>
     <lastmod>2025-12-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vitchennai.acm.org/events/code_pulse_march_2026.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vitchennai.acm.org/events/docker_workshop.html</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vitchennai.acm.org/events/dsa_bootcamp.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vitchennai.acm.org/events/finance_workshop.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vitchennai.acm.org/events/gen_ai_workshop.html</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -61,32 +91,20 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://vitchennai.acm.org/events/linux_git_workshop.html</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://vitchennai.acm.org/events/pages_to_progress.html</loc>
     <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vitchennai.acm.org/events/finance_workshop.html</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://vitchennai.acm.org/events/docker_workshop.html</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://vitchennai.acm.org/events/code_pulse.html</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://vitchennai.acm.org/events/linux_git_workshop.html</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://vitchennai.acm.org/events/server_surfers.html</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

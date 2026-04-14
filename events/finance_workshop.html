@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQJG4HGBW0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KQJG4HGBW0');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQJG4HGBW0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KQJG4HGBW0');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="ACM Student Chapter VIT Chennai">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="../assets/favicon.ico">
     <link rel="apple-touch-icon" href="../assets/logo.webp">
@@ -25,6 +25,104 @@
     <title>Personal Finance Workshop - ACM VIT Chennai</title>
     <link rel="stylesheet" href="../assets/css/style.css?v=20260412">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .reviews-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .review-card {
+            background: var(--deep-slate);
+            border: 1px solid var(--light-slate);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            transition: all 0.4s var(--ease-luxury);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+        }
+
+        .review-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            color: rgba(212, 175, 55, 0.15);
+            font-size: 1.5rem;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            display: grid;
+            place-items: center;
+            color: var(--gold-primary);
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .review-meta h5 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            color: var(--text-bright);
+            margin: 0 0 0.2rem 0;
+        }
+
+        .review-meta span {
+            font-size: 0.75rem;
+            color: var(--gold-primary);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .review-body {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .review-keywords {
+            margin-top: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--light-slate);
+        }
+
+        .keyword-badge {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--gold-primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,7 +152,8 @@
             <p>A collaborative initiative by ACM Student Chapter & VITFAM.</p>
         </div>
         <div class="hero-split-image">
-            <img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/poster.webp" alt="Finance Workshop Poster">
+            <img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/poster.webp"
+                alt="Finance Workshop Poster">
         </div>
     </section>
 
@@ -133,31 +232,43 @@
                 <div class="scrolling-gallery-container">
                     <div class="scrolling-gallery-track">
                         <!-- Original Set -->
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/1.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/1.webp"
                                 alt="Gallery Image 1"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/2.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/2.webp"
                                 alt="Gallery Image 2"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/3.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/3.webp"
                                 alt="Gallery Image 3"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/4.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/4.webp"
                                 alt="Gallery Image 4"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/5.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/5.webp"
                                 alt="Gallery Image 5"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/poster.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/poster.webp"
                                 alt="Poster"></div>
 
                         <!-- Duplicate Set for Smooth Scroll -->
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/1.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/1.webp"
                                 alt="Gallery Image 1"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/2.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/2.webp"
                                 alt="Gallery Image 2"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/3.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/3.webp"
                                 alt="Gallery Image 3"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/4.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/4.webp"
                                 alt="Gallery Image 4"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/5.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/5.webp"
                                 alt="Gallery Image 5"></div>
-                        <div class="scrolling-gallery-item"><img src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/poster.webp"
+                        <div class="scrolling-gallery-item"><img
+                                src="https://raw.githubusercontent.com/vitccacm/websitev2/refs/heads/main/events/event-img/finance_workshop/poster.webp"
                                 alt="Poster"></div>
                     </div>
                 </div>
@@ -165,36 +276,64 @@
         </div>
     </section>
 
-    <!-- FEEDBACK (TERMINAL STYLE) -->
+    <!-- FEEDBACK REVIEWS -->
     <section>
         <div class="section-container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title text-center">Participant Feedback</h2>
-
-                <div class="terminal-container">
-                    <div class="terminal-header">
-                        <div class="terminal-dot red"></div>
-                        <div class="terminal-dot yellow"></div>
-                        <div class="terminal-dot green"></div>
-                        <span style="font-size: 0.8rem; color: #888; margin-left: 10px;">feedback.log</span>
+            <h2 class="section-title text-center">Participant Feedback</h2>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">T</div>
+                        <div class="review-meta">
+                            <h5>Tamil Selvam D</h5>
+                            <span>VIT Chennai &bull; Finance Workshop</span>
+                        </div>
                     </div>
-                    <div class="terminal-body">
-                        <p class="command-line">$ cat response_01.txt</p>
-                        <span class="command-output">"The interactive discussions and real-life examples made the
-                            session engaging and relatable. It really helped connect concepts to everyday
-                            scenarios."</span>
-
-                        <p class="command-line">$ cat response_02.txt</p>
-                        <span class="command-output">"I feel much more confident in handling my personal finances now.
-                            The motivation to plan for my financial future is renewed."</span>
-
-                        <p class="command-line">$ cat response_03.txt</p>
-                        <span class="command-output">"An overwhelming response! The session successfully bridged the gap
-                            between theoretical learning and practical awareness."</span>
-
-                        <span class="command-line helper-cursor">_</span>
+                    <div class="review-body">
+                        It was an interactive session and a best session for me. I got more knowledge about all things
+                        relating to finance, trading, banking, etc. It was a good session.
                     </div>
-                </div>
+                    <div class="review-keywords">
+                        <span class="keyword-badge">Interactive</span>
+                        <span class="keyword-badge">Knowledgeable</span>
+                        <span class="keyword-badge">Finance</span>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">S</div>
+                        <div class="review-meta">
+                            <h5>Sudharsan M</h5>
+                            <span>VIT Chennai &bull; Finance Workshop</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        Highly informative and interactive session.
+                    </div>
+                    <div class="review-keywords">
+                        <span class="keyword-badge">Informative</span>
+                        <span class="keyword-badge">Interactive</span>
+                        <span class="keyword-badge">Engaging</span>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">K</div>
+                        <div class="review-meta">
+                            <h5>Kishore P</h5>
+                            <span>VIT Chennai &bull; Finance Workshop</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        Everything went well and I learnt a lot in the gigs of savings, credits, and investment apart
+                        from things I knew. Thank you for this wonderful event.
+                    </div>
+                    <div class="review-keywords">
+                        <span class="keyword-badge">Learnt A Lot</span>
+                        <span class="keyword-badge">Investment</span>
+                        <span class="keyword-badge">Wonderful Event</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -238,7 +377,8 @@
                     <a href="https://www.instagram.com/acm_vitcc/" target="_blank" class="social-link"
                         title="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="social-link" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://github.com/vitccacm" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/vitccacm" target="_blank" class="social-link" title="GitHub"><i
+                            class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
